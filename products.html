@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+    * { /*Applies the box-sizing model to all elements ensuring that padding and border are included in the element's total width and height.*/
+    box-sizing: border-box;
+  }
+  body { /*Sets the default font for the entire page to "Open Sans" with a fallback of a generic sans-serif font.*/
+    font-family: 'Open Sans', sans-serif;
+  }
+  a { /*Removes underlines from all hyperlinks*/
+    text-decoration: none;
+  }
+  ul { /*Removes default list styles from unordered lists and sets padding and margin to zero.*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .container { /*Sets padding and margins for elements with the class "container."*/
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* End Global Rules */
+  
+  /* Start Project Page */
+  .Project header { 
+  
+    min-height: 80px; /*Sets a minimum height of 80 pixels for the header.*/
+    display: flex; /*Makes the header a flex container.*/
+  }
+  .Project header .container { /* Styles the container within the header.*/
+  
+    display: flex; /*Makes the container a flex container.*/
+    align-items: center; /*Vertically centers the items inside the container.*/
+    justify-content: space-between; /* Creates space between items, pushing them to the edges horizontally.*/
+  }
+  
+  .Project header .logo { /* Styles the logo within the header.*/
+  
+    color: #5d5d5d; /*Sets the text color to a dark gray.*/
+    font-style: italic; /*Makes the font italic.*/ 
+    text-transform: uppercase; /*Transforms the text to uppercase.*/
+    font-size: 20px; /*Sets the font size to 20 pixels.*/
+  }
+  
+  .Project header .links { /*Styles the navigation links within the header.*/
+	  
+    display: flex; /*Makes the links a flex container.*/
+    align-items: center; /*Vertically centers the links.*/
+    margin-left: 400px; /*Adds a left margin of 400 pixels.*/
+  }
+  
+  .Project header .links li { /*Styles each individual link item.*/
+	  
+    margin-left: 30px; /*Adds left margin between each link.*/
+    color: #5d5d5d; /*Sets the text color to a dark gray.*/
+    cursor: pointer; /*Changes the cursor to a pointer on hover.*/
+    transition: .3s; /*Adds a smooth transition effect over 0.3 seconds.*/
+  }
+  
+  .Project header .links li:last-child { /*Styles the last link item differently.*/
+	  
+    border-radius: 20px; /*Adds rounded corners.*/
+    padding: 10px 20px; /*Adds padding to the last link.*/
+    color: #FFF; /*Sets the text color to white.*/
+    background-color: #6c63ff; /*Sets the background color to a specific shade of purple.*/
+  }
+
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px 0;
+    }
+
+    .product {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+        padding: 20px;
+        text-align: center;
+        width: 300px;
+        transition: transform 0.3s;
+    }
+
+    .product:hover {
+        transform: scale(1.05);
+    }
+
+    .product img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .product h2 {
+        color: #333;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .product p {
+        color: #666;
+        font-size: 1em;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .product span {
+        color: #e44d26;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    .product button{
+        border: none;
+        padding: 10px 20px;
+        background-color: #6c63ff;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .product button:hover{
+        background-color: #555;
+    }
+    </style>
+</head>
+<body>
+    <div class="Project">
+        <header>
+          <div class="container">
+            <a href="#" class="logo">E-<b>Parts</b></a>
+            <ul class="links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="index.html">Contact Us</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="sitemap.html">Sitemap</a></li>
+              <li><a href="form.html">Validation Form</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+        </header>
+        <section class="products">
+            <!-- Product items -->
+            <div class="product">
+                <img src="Asus.png"  alt="Product 1">
+                <p>ASUS ROG Strix curved HDR400 1ms (170hz)</p>
+                <span>529.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="Asus2.png" alt="Product 2">
+                <p>ASUS ROG Swift 360Hz 1ms Full HD HDR 10 G-SYNC</p>
+                <span>549.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="Asus3.png"  alt="Product 3">
+                <p>ASUS VA27EHE 27” IPS Full HD 75Hz Frameless Adaptive-Sync</p>
+                <span>119.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="HyperX.png" alt="Product 4">
+                <p>HP HyperX Pulsefire FPS Pro Gaming Mouse (Gunmetal) USB</p>
+                <span>27.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="steelseries.png"  alt="Product 5">
+                <p>SteelSeries Rival 3 gaming mouse</p>
+                <span>29.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="Razer.png"  alt="Product 6">
+                <p>Razer DeathAdder V2 Gaming Mouse 20K DPI Optical Sensor</p>
+                <span>59.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="HyperXkey.png" alt="Product 7">
+                <p>HyperX Alloy Origins 60 Percent Mechanical Gaming Keyboard</p>
+                <span>70.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="Razer_Ornata.png" alt="Product 8">
+                <p>Razer Ornata V2 Chroma Hyb Mech Gaming Keyboard - Us</p>
+                <span>67.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="apex.png" alt="Product 9">
+                <p>SteelSeries Apex 3 Water resistant Gaming Keyboard</p>
+                <span>59.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="HyperxHead.png"  alt="Product 10">
+                <p>HyperX Cloud Stinger Wired Gaming Headset (Black/Red)</p>
+                <span>45.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="razer-blackshark.png"  alt="Product 11">
+                <p>Razer BlackShark V2 X Wired Gaming Headset</p>
+                <span>55.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="arctis1.png"  alt="Product 12">
+                <p>SteelSeries Arctis 1 Detachable Clearcast Microphone</p>
+                <span>49.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="intel.png"  alt="Product 13">
+                <p>Intel NEW 12Gen Core i7-12700K 12-Cores up to 5.0 GHz 37MB</p>
+                <span>289.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="Ryzen.png" alt="Product 14">
+                <p>AMD Ryzen 9 7950X 3D 5.70GHz CPU</p>
+                <span>27$</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="Tuf.png" alt="Product 15">
+                <p>ASUS TUF-RTX3080TI-12G-GAMING</p>
+                <span>660.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="Nvidia.png" alt="Product 16">
+                <p>NVIDIA GeForce RTX 4080</p>
+                <span>999.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="Nvidia2.png" alt="Product 17">
+                <p>NVIDIA Geoforce 3080 RTX</p>
+                <span>350.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="Asusgox.png" alt="Product 18">
+                <p>ASUS ROG Strix Helios GX601 Mid-Tower Case (Black)</p>
+                <span>299.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="HYTE.PNG" alt="Product 19">
+                <p>HYTE Y60 Mid-Tower Case (Snow White)</p>
+                <span>169.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+            <div class="product">
+                <img src="NZXT.png" alt="Product 20">
+                <p>NZXT H9 Elite ATX Mid Tower PC Gaming Case-CM-H91EB-01</p>
+                <span>469.00 JOD</span>
+                <br>
+                <button>+</button>
+            </div>
+        </section>
+</body>
+</html>

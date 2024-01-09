@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap</title>
+    <style>
+   * { /*Applies the box-sizing model to all elements ensuring that padding and border are included in the element's total width and height.*/
+    box-sizing: border-box;
+  }
+  body { /*Sets the default font for the entire page to "Open Sans" with a fallback of a generic sans-serif font.*/
+    font-family: 'Open Sans', sans-serif;
+  }
+  a { /*Removes underlines from all hyperlinks*/
+    text-decoration: none;
+  }
+  ul { /*Removes default list styles from unordered lists and sets padding and margin to zero.*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .container { /*Sets padding and margins for elements with the class "container."*/
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* End Global Rules */
+  
+  /* Start Project Page */
+  .Project header { 
+  
+    min-height: 80px; /*Sets a minimum height of 80 pixels for the header.*/
+    display: flex; /*Makes the header a flex container.*/
+  }
+  .Project header .container { /* Styles the container within the header.*/
+  
+    display: flex; /*Makes the container a flex container.*/
+    align-items: center; /*Vertically centers the items inside the container.*/
+    justify-content: space-between; /* Creates space between items, pushing them to the edges horizontally.*/
+  }
+  
+  .Project header .logo { /* Styles the logo within the header.*/
+  
+    color: #5d5d5d; /*Sets the text color to a dark gray.*/
+    font-style: italic; /*Makes the font italic.*/ 
+    text-transform: uppercase; /*Transforms the text to uppercase.*/
+    font-size: 20px; /*Sets the font size to 20 pixels.*/
+  }
+  
+  .Project header .links { /*Styles the navigation links within the header.*/
+	  
+    display: flex; /*Makes the links a flex container.*/
+    align-items: center; /*Vertically centers the links.*/
+    margin-left: 400px; /*Adds a left margin of 400 pixels.*/
+  }
+  
+  .Project header .links li { /*Styles each individual link item.*/
+	  
+    margin-left: 30px; /*Adds left margin between each link.*/
+    color: #5d5d5d; /*Sets the text color to a dark gray.*/
+    cursor: pointer; /*Changes the cursor to a pointer on hover.*/
+    transition: .3s; /*Adds a smooth transition effect over 0.3 seconds.*/
+  }
+  
+  .Project header .links li:last-child { /*Styles the last link item differently.*/
+	  
+    border-radius: 20px; /*Adds rounded corners.*/
+    padding: 10px 20px; /*Adds padding to the last link.*/
+    color: #FFF; /*Sets the text color to white.*/
+    background-color: #6c63ff; /*Sets the background color to a specific shade of purple.*/
+  }
+
+    img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="Project">
+        <header>
+          <div class="container">
+            <a href="#" class="logo">E-<b>Parts</b></a>
+            <ul class="links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="index.html">Contact Us</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="sitemap.html">Sitemap</a></li>
+              <li><a href="form.html">Validation Form</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+        </header>
+        <img src="Sitemap.png">
+</body>
+</html>

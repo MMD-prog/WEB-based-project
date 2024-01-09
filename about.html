@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        a {
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .about-image {
+            background-image: url('Back.png');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .special-heading {
+            color: #fdfdfd;
+            padding: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+        }
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .Project header {
+            min-height: 80px;
+            display: flex;
+        }
+        .Project header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .Project header .logo {
+            color: #fdfdfd;
+            font-style: italic;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+        .Project header .links {
+            display: flex;
+            align-items: center;
+            margin-top: 17px;
+            margin-left: 400px;
+            font-size: 18px;
+            
+        }
+        .Project header .links li {
+            margin-left: 30px;
+            color: #5d5d5d;
+            cursor: pointer;
+            transition: .3s;
+        }
+        .Project header .links li:last-child {
+            border-radius: 20px;
+            padding: 10px 20px;
+            color: #FFF;
+            background-color: #fdfdfd ;
+        }
+        .Project header .links li:not(:last-child):hover {
+            color: #fdfdfd;
+        }
+        .text {
+            color: #f1f1f1;
+            padding: 15px;
+            margin-bottom: 5px;
+        }
+        .link-style {
+            color: #fdfdfd;
+            padding: 5px;
+            text-decoration: underline;
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="about-image">
+    <div class="Project">
+        <header>
+            <div class="container">
+                <a href="#" class="logo">E-<b>Parts</b></a>
+            </div>
+            <div>
+                <ul class="links link-style">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="form.html">Validation Form</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="about-us">
+            <div class="container">
+                <h2 class="special-heading">The next generation</h2>
+                <p class="text">Happiness does not lie in happiness, but in the ACHIEVEMENT of it.</p>
+                <div class="about-content">
+                    <div class="text">
+                        <p style="font-size: 20px;">Young, wild and free</p>
+                        <br>
+                        <p>Happy to present our first web project about the topic of e-commerce. I hope that you have enjoyed our views.</p>
+
+                        <p>Feel free to browse, explore and have an adventure. We accept your reviews if you go to the <a class="link-style" href="Testimonials.html">Testimonials</a> section.</p>
+                        <hr>
+                        <h2 class="special-heading">The Students in action:</h2>
+                        <p>
+                            Mousa Estefan
+                            <br>
+                            Mohammad Luay
+                            <br>
+                            Dania Salaj
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

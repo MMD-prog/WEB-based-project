@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 0.8em;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Menu -->
+<nav>
+    <a href="#validation-form">Validation Form</a>
+</nav>
+
+<!-- Validation Form -->
+<form id="Validation-form">
+    <h2>Validation Form</h2>
+
+    <!-- Date and Time -->
+    <p>Current Date and Time: <span id="dateTime"></span></p>
+
+    <!-- Name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <span id="nameError" class="error"></span>
+
+    <!-- Contact Information -->
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+    <span id="emailError" class="error"></span>
+
+    <!-- Age -->
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age">
+    <span id="ageError" class="error"></span>
+
+    <!-- Item Quantity -->
+    <label for="quantity">Item Quantity:</label>
+    <input type="number" id="quantity" name="quantity">
+    <span id="quantityError" class="error"></span>
+
+    <!-- Income -->
+    <label for="income">Income:</label>
+    <input type="number" id="income" name="income">
+    <span id="incomeError" class="error"></span>
+
+    <!-- Check your E-parts -->
+    <label>Check your E-parts</label>
+    <input type="checkbox" id="pc" name="activity" value="Pc">
+    <label for="pc">Pc</label>
+
+    <input type="checkbox" id="gaming" name="activity" value="Gaming">
+    <label for="gaming">Gaming</label>
+
+    <input type="radio" id="mouse" name="activity" value="Mouse">
+    <label for="mouse">Mouse</label>
+    <span id="activityError" class="error"></span>
+
+    <!-- Comments -->
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments"></textarea>
+
+    <!-- Submit Button -->
+    <button type="button" onclick="validateForm()">Submit</button>
+
+    <!-- Report Display -->
+    <h3>Report</h3>
+    <textarea id="report" readonly></textarea>
+</form>
+
+<!-- Script for Date and Time -->
+<script>
+    function updateDateTime() {
+        var now = new Date();
+        var dateTimeString = now.toLocaleString();
+        document.getElementById('dateTime').innerText = dateTimeString;
+    }
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+    // Initial update
+    updateDateTime();
+</script>
+
+<!-- Script for Form Validation and Calculations -->
+<script>
+    function validateForm() {
+        // Reset error messages
+        document.getElementById('nameError').innerText = '';
+        document.getElementById('emailError').innerText = '';
+        document.getElementById('ageError').innerText = '';
+        document.getElementById('quantityError').innerText = '';
+        document.getElementById('incomeError').innerText = '';
+        document.getElementById('activityError').innerText = '';
+
+        // Implement validation logic here
+        // For demonstration, check if name and at least one activity are provided, and ensure no negative numbers in numerical fields
+        var name = document.getElementById('name').value.trim();
+        var activities = document.querySelectorAll('input[name="activity"]:checked');
+        var age = document.getElementById('age').value;
+        var quantity = document.getElementById('quantity').value;
+        var income = document.getElementById('income').value;
+
+        if (name === '') {
+            document.getElementById('nameError').innerText = 'Name is required.';
+        }
+
+        if (activities.length === 0) {
+            document.getElementById('activityError').innerText = 'Select at least one E-parts.';
+        }
+
+        if (age < 0) {
+            document.getElementById('ageError').innerText = 'Age cannot be negative.';
+        }
+
+        if (quantity < 0) {
+            document.getElementById('quantityError').innerText = 'Item Quantity cannot be negative.';
+        }
+
+        if (income < 0) {
+            document.getElementById('incomeError').innerText = 'Income cannot be negative.';
+        }
+
+        // If all validations pass, proceed with calculations and report writing
+        if (name !== '' && activities.length > 0 && age >= 0 && quantity >= 0 && income >= 0) {
+            // Get values from form fields
+            var email = document.getElementById('email').value.trim();
+            var comments = document.getElementById('comments').value.trim();
+
+            // Perform calculations (e.g., total income based on quantity)
+            var totalIncome = quantity * income;
+
+            // Build the report
+            var report = `Name: ${name}\nEmail: ${email}\nAge: ${age}\nItem Quantity: ${quantity}\nIncome: ${income}\nTotal Income: ${totalIncome}\n\nCheck your E-parts:`;
+            activities.forEach(function(activity) {
+                report += `\n- ${activity.value}`;
+            });
+
+            if (comments !== '') {
+                report += `\n\nComments:\n${comments}`;
+            }
+
+            // Display the report in the textarea
+            document.getElementById('report').value = report;
+        }
+    }
+</script>
+
+</body>
+</html>

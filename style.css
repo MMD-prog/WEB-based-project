@@ -1,0 +1,197 @@
+* { /*Applies the box-sizing model to all elements ensuring that padding and border are included in the element's total width and height.*/
+    box-sizing: border-box;
+  }
+  body { /*Sets the default font for the entire page to "Open Sans" with a fallback of a generic sans-serif font.*/
+    font-family: 'Open Sans', sans-serif;
+  }
+  a { /*Removes underlines from all hyperlinks*/
+    text-decoration: none;
+  }
+  ul { /*Removes default list styles from unordered lists and sets padding and margin to zero.*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .container { /*Sets padding and margins for elements with the class "container."*/
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* End Global Rules */
+  
+  /* Start Project Page */
+  .Project header { 
+  
+    min-height: 80px; /*Sets a minimum height of 80 pixels for the header.*/
+    display: flex; /*Makes the header a flex container.*/
+  }
+  .Project header .container { /* Styles the container within the header.*/
+  
+    display: flex; /*Makes the container a flex container.*/
+    align-items: center; /*Vertically centers the items inside the container.*/
+    justify-content: space-between; /* Creates space between items, pushing them to the edges horizontally.*/
+  }
+  
+  .Project header .logo { /* Styles the logo within the header.*/
+  
+    color: #5d5d5d; /*Sets the text color to a dark gray.*/
+    font-style: italic; /*Makes the font italic.*/ 
+    text-transform: uppercase; /*Transforms the text to uppercase.*/
+    font-size: 20px; /*Sets the font size to 20 pixels.*/
+  }
+  
+  .Project header .links { /*Styles the navigation links within the header.*/
+	  
+    display: flex; /*Makes the links a flex container.*/
+    align-items: center; /*Vertically centers the links.*/
+    margin-left: 400px; /*Adds a left margin of 400 pixels.*/
+  }
+  
+  .Project header .links li { /*Styles each individual link item.*/
+	  
+    margin-left: 30px; /*Adds left margin between each link.*/
+    color: #5d5d5d; /*Sets the text color to a dark gray.*/
+    cursor: pointer; /*Changes the cursor to a pointer on hover.*/
+    transition: .3s; /*Adds a smooth transition effect over 0.3 seconds.*/
+  }
+  
+  .Project header .links li:last-child { /*Styles the last link item differently.*/
+	  
+    border-radius: 20px; /*Adds rounded corners.*/
+    padding: 10px 20px; /*Adds padding to the last link.*/
+    color: #FFF; /*Sets the text color to white.*/
+    background-color: #6c63ff; /*Sets the background color to a specific shade of purple.*/
+  }
+  
+    /* End Header Styles */
+    
+    /* Start Content Styles */
+    .Project .content .container { /*Styles the container within the content section.*/
+	
+        display: flex; /*Makes the container a flex container.*/
+        align-items: center; /*Vertically centers the items inside the container.*/
+        justify-content: space-between; /*Creates space between items, pushing them to the edges horizontally.*/
+        gap: 140px; /*Adds a gap of 140 pixels between the child elements.*/
+        min-height: calc(100vh - 80px); /*Sets a minimum height, considering the viewport height minus the header height.*/
+        padding: 40px 0; /*Adds padding to the top and bottom of the container.*/
+    }
+    
+    .Project .content .info { /*Styles the information section within the content.*/
+	
+        flex: 1; /* Allows the info section to expand and take available space.*/
+    }
+    
+    .Project .content .info h1 { /*Styles the heading within the info section.*/
+		
+        color: #5d5d5d; /* Sets the text color to a dark gray.*/
+        font-size: 44px; /*Sets the font size to 44 pixels.*/
+    }
+    
+    .Project .content .info p { /* Styles the paragraph within the info section.*/
+		
+        margin: 10px 0; /* Adds margin to the top and bottom of the paragraph.*/
+        line-height: 1.6; /*Sets the line height to 1.6 times the font size.*/
+        font-size: 15px; /*Sets the font size to 15 pixels.*/
+        color: #5d5d5d; /*Sets the text color to a dark gray.*/
+    }
+    
+    .Project .content .info button { /*Styles the button within the info section.*/
+		
+        border: 0; /* Removes the button border.*/
+        border-radius: 20px; /*Adds rounded corners.*/
+        padding: 12px 30px; /* Adds padding to the button.*/
+        margin-top: 30px; /* Adds margin to the top of the button.*/
+        cursor: pointer; /* Changes the cursor to a pointer on hover.*/
+        color: #FFF; /*Sets the text color to white.*/
+        background-color: #6c63ff; /*Sets the background color to a specific shade of purple.*/
+    }
+    
+    .Project .content .image img { /*Styles the image within the content section.*/
+		
+        max-width: 100%; /* Ensures the image doesn't exceed its container's width.*/
+        border-radius: 10px; /* Adds rounded corners to the image.*/
+    }
+    /* End Content Styles */
+    footer { 
+		
+      display: flex; /*Makes the footer a flex container, allowing its children to be flex items.*/
+      flex-direction: column; /* Sets the main axis of the flex container to be vertical, making the children stack vertically.*/
+      background-color: black; /*Sets the background color of the footer to black.*/
+      align-items: center; /*Centers the children of the flex container along the cross-axis (vertically in this case).*/
+      color: white; /*Sets the text color inside the footer to white.*/
+    }
+    
+    .footer1 { /* Represents a section within the footer.*/
+		
+      display: flex; /*Makes it a flex container.*/
+      flex-direction: column; /*Stacks its children vertically.*/
+      align-items: center; /*Centers the children along the cross-axis.*/
+      color: white; /* Sets the text color to white.*/
+      margin-top: 15px; /*Adds top margin for spacing.*/
+    }
+    .social-media { /* Represents a container for social media icons.*/
+		
+      display: flex; /*Makes it a flex container.*/
+      justify-content: center; /*Centers the icons along the main axis.*/
+      color: white; /*Sets the text color to white.*/
+      flex-wrap: wrap; /*Allows the icons to wrap onto a new line if there isn't enough space.*/
+    }
+    .social-media a { /*Styles the anchor elements (links) within the social media container.*/
+		
+      color: white; /*Sets the text color to white.*/
+      margin: 20px; /*Adds margin around each link.*/
+      border-radius: 5px; /*Adds rounded corners to the links.*/
+      margin-top: 10px; /*Adds top margin for spacing.*/
+    }
+    .social-media a ion-icon { /*Styles the ion-icon elements within the links.*/
+	
+      color: white; /*Sets the text color to white.*/
+      background-color: black; /*Sets the background color of the icons to black.*/
+    }
+    .footer2 { /* Another section within the footer.*/
+		
+      display: flex; /*Makes it a flex container.*/
+      width: 100%; /*Takes up the full width of its container.*/
+      justify-content: space-evenly; /*Spaces its children evenly along the main axis.*/
+      align-items: center; /*Centers the children along the cross-axis.*/
+      text-decoration: none; /*Removes text decoration (underlining).*/
+      flex-wrap: wrap; /*Allows the items to wrap onto a new line if there isn't enough space.*/
+    }
+    .footer0 { /*Represents a text element within the footer.*/
+	
+      font-weight: 1200; /*Sets the font weight to a high value.*/
+      transition-duration: 1s; /*Specifies the duration of the color transition.*/
+    }
+    .footer0:hover { /* Styles the .footer0 element on hover.*/
+	
+      color: rgb(243, 168, 7); /* Changes the text color on hover.*/
+    }
+    .footer2 .heading { /* Styles heading elements within the .footer2 section.*/
+	
+      font-weight: 900; /*Sets the font weight to 900.*/
+      font-size: 18px; /*Sets the font size to 18 pixels.*/
+    }
+    .footer3 { /*Another section within the footer.*/
+		
+      margin-top: 60px; /*Adds top margin for spacing.*/
+      margin-bottom: 20px; /*Adds bottom margin for spacing.*/
+      display: flex; /* Makes it a flex container.*/
+      flex-wrap: wrap; /*Allows the items to wrap onto a new line if there isn't enough space.*/
+      justify-content: center; /*Centers the children along the main axis.*/
+    }
+    .footer2 .heading:hover { /*Styles the .heading element within .footer2 on hover.*/
+	
+      color: rgb(243, 168, 7); /*Changes the text color on hover.*/
+    }
+    .footer2 .div:hover { /*Styles div elements within .footer2 on hover.*/
+	
+      transform: scale(1.05); /*Enlarges the size of the elements on hover.*/
+    }
+    .footer3 h4 { /*Styles h4 elements within the .footer3 section.*/
+	
+      margin: 0 10px; /*Adds margin to the left and right of the elements.*/
+    }
+    .footer2 div {
+      margin: 10px; /*Adds margin around each div.*/
+    }
